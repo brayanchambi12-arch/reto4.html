@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galería de Instrumentos Musicales</title>
+    <title>Instrumentos Musicales</title>
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
 
         body {
@@ -20,132 +20,130 @@
 
         /* ENCABEZADO */
         header {
-            height: 146px;
-            background-color: #222;
+            background-color: #303f9f;
             color: white;
             text-align: center;
-            padding-top: 27px;
+            padding: 24px 20px;
         }
 
         header h1 {
             font-size: 22px;
-            margin-bottom: 7px;
+            margin-bottom: 3px;
         }
 
         header p {
-            font-size: 10px;
+            font-size: 11px;
             font-weight: bold;
         }
 
-        /* GALERÍA */
-        .galeria {
-            width: 800px;
-            margin: 27px auto;
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 16px;
+        /* MENÚ */
+        nav {
+            background-color: #202d86;
+            text-align: center;
+            padding: 11px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 11px;
+            font-weight: bold;
+            margin: 0 14px;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+        main {
+            max-width: 800px;
+            margin: 26px auto;
+            padding: 0 15px;
+        }
+
+        .introduccion {
+            background-color: white;
+            padding: 20px;
+            border-radius: 7px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+            margin-bottom: 22px;
+        }
+
+        .introduccion h2 {
+            color: #263b9b;
+            font-size: 17px;
+            margin-bottom: 10px;
+        }
+
+        .introduccion p {
+            font-size: 11px;
+            line-height: 1.7;
+        }
+
+        /* TÍTULO */
+        .titulo-servicios {
+            text-align: center;
+            color: #263b9b;
+            font-size: 24px;
+            margin: 20px 0;
         }
 
         /* TARJETAS */
-        .instrumento {
+        .instrumentos {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .tarjeta {
             background-color: white;
+            min-height: 188px;
+            padding: 28px 18px;
             border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
             text-align: center;
+            box-shadow: 0 4px 9px rgba(0,0,0,0.12);
         }
 
-        /* PARTE SUPERIOR */
-        .imagen {
-            height: 145px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
+        .icono {
+            font-size: 35px;
+            margin-bottom: 12px;
         }
 
-        .imagen h2 {
-            font-size: 42px;
-            font-weight: normal;
-        }
-
-        /* COLORES */
-        .guitarra {
-            background-color: #333333;
-        }
-
-        .piano {
-            background-color: #246abd;
-        }
-
-        .bateria {
-            background-color: #683bb5;
-        }
-
-        .violin {
-            background-color: #ed1760;
-        }
-
-        .saxofon {
-            background-color: #ff9900;
-        }
-
-        .trompeta {
-            background-color: #079b91;
-        }
-
-        /* INFORMACIÓN */
-        .informacion {
-            height: 182px;
-            padding: 17px 10px;
-        }
-
-        .informacion h3 {
+        .tarjeta h3 {
+            color: #263b9b;
             font-size: 16px;
-            margin-bottom: 9px;
+            margin-bottom: 10px;
         }
 
-        .informacion p {
+        .tarjeta p {
             font-size: 11px;
-            color: #444;
-            margin-bottom: 27px;
+            line-height: 1.5;
         }
 
-        .precio {
-            color: #009688;
-            font-size: 15px;
-            font-weight: bold;
-            margin-bottom: 11px;
-        }
-
-        /* BOTÓN */
-        .btn {
-            display: inline-block;
-            background-color: #008f83;
+        /* PIE DE PÁGINA */
+        footer {
+            background-color: #202d86;
             color: white;
-            border: none;
-            border-radius: 4px;
-            padding: 8px 18px;
+            text-align: center;
+            padding: 20px;
+            margin-top: 26px;
             font-size: 11px;
             font-weight: bold;
-            cursor: pointer;
         }
 
-        .btn:hover {
-            background-color: #00766d;
-        }
-
-        /* RESPONSIVE */
-        @media (max-width: 850px) {
-            .galeria {
-                width: 95%;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .galeria {
+        /* DISEÑO RESPONSIVO */
+        @media (max-width: 700px) {
+            .instrumentos {
                 grid-template-columns: 1fr;
-                width: 90%;
+            }
+
+            main {
+                max-width: 95%;
+            }
+
+            nav a {
+                margin: 0 7px;
             }
         }
     </style>
@@ -153,110 +151,81 @@
 
 <body>
 
+    <!-- ENCABEZADO -->
     <header>
-        <h1>🎵 GALERÍA DE INSTRUMENTOS MUSICALES</h1>
-        <p>Encuentra instrumentos musicales para ti</p>
+        <h1>Mundo Musical</h1>
+        <p>Instrumentos musicales para todos</p>
     </header>
 
-    <main class="galeria">
+    <!-- MENÚ -->
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Instrumentos</a>
+        <a href="#">Nosotros</a>
+        <a href="#">Contacto</a>
+    </nav>
 
-        <!-- GUITARRA -->
-        <div class="instrumento">
-            <div class="imagen guitarra">
-                <h2>Guitarra</h2>
+    <!-- CONTENIDO -->
+    <main>
+
+        <section class="introduccion">
+            <h2>Instrumentos de ancho completo</h2>
+
+            <p>
+                Encuentra una gran variedad de instrumentos musicales para
+                principiantes y profesionales. Contamos con instrumentos de
+                cuerda, percusión y viento para todos los gustos.
+            </p>
+        </section>
+
+        <h2 class="titulo-servicios">Nuestros Instrumentos</h2>
+
+        <section class="instrumentos">
+
+            <!-- TARJETA 1 -->
+            <div class="tarjeta">
+                <div class="icono">🎸</div>
+
+                <h3>Guitarra</h3>
+
+                <p>
+                    Guitarras acústicas y eléctricas ideales para aprender,
+                    practicar y disfrutar de la música.
+                </p>
             </div>
 
-            <div class="informacion">
-                <h3>Guitarra Acústica</h3>
-                <p>Guitarra ideal para principiantes y músicos.</p>
+            <!-- TARJETA 2 -->
+            <div class="tarjeta">
+                <div class="icono">🎹</div>
 
-                <div class="precio">S/ 450.00</div>
+                <h3>Piano</h3>
 
-                <button class="btn">Comprar</button>
-            </div>
-        </div>
-
-        <!-- PIANO -->
-        <div class="instrumento">
-            <div class="imagen piano">
-                <h2>Piano</h2>
+                <p>
+                    Pianos y teclados para interpretar melodías y desarrollar
+                    tus habilidades musicales.
+                </p>
             </div>
 
-            <div class="informacion">
-                <h3>Piano Digital</h3>
-                <p>Piano digital con excelente calidad de sonido.</p>
+            <!-- TARJETA 3 -->
+            <div class="tarjeta">
+                <div class="icono">🥁</div>
 
-                <div class="precio">S/ 1,800.00</div>
+                <h3>Batería</h3>
 
-                <button class="btn">Comprar</button>
-            </div>
-        </div>
-
-        <!-- BATERÍA -->
-        <div class="instrumento">
-            <div class="imagen bateria">
-                <h2>Batería</h2>
+                <p>
+                    Baterías y accesorios para crear ritmos, practicar y tocar
+                    junto a tus canciones favoritas.
+                </p>
             </div>
 
-            <div class="informacion">
-                <h3>Batería Musical</h3>
-                <p>Batería completa para practicar y tocar.</p>
-
-                <div class="precio">S/ 2,200.00</div>
-
-                <button class="btn">Comprar</button>
-            </div>
-        </div>
-
-        <!-- VIOLÍN -->
-        <div class="instrumento">
-            <div class="imagen violin">
-                <h2>Violín</h2>
-            </div>
-
-            <div class="informacion">
-                <h3>Violín Clásico</h3>
-                <p>Violín de madera con sonido cálido y claro.</p>
-
-                <div class="precio">S/ 650.00</div>
-
-                <button class="btn">Comprar</button>
-            </div>
-        </div>
-
-        <!-- SAXOFÓN -->
-        <div class="instrumento">
-            <div class="imagen saxofon">
-                <h2>Saxofón</h2>
-            </div>
-
-            <div class="informacion">
-                <h3>Saxofón Alto</h3>
-                <p>Saxofón ideal para músicos principiantes.</p>
-
-                <div class="precio">S/ 1,500.00</div>
-
-                <button class="btn">Comprar</button>
-            </div>
-        </div>
-
-        <!-- TROMPETA -->
-        <div class="instrumento">
-            <div class="imagen trompeta">
-                <h2>Trompeta</h2>
-            </div>
-
-            <div class="informacion">
-                <h3>Trompeta Profesional</h3>
-                <p>Trompeta de excelente sonido y acabado.</p>
-
-                <div class="precio">S/ 900.00</div>
-
-                <button class="btn">Comprar</button>
-            </div>
-        </div>
+        </section>
 
     </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        © 2026 Mundo Musical
+    </footer>
 
 </body>
 </html>
